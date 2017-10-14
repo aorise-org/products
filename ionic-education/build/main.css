@@ -25512,11 +25512,23 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-top));
 }
 
-page-preview .preview-player {
+.content-title {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: large;
+}
+
+.content-body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: small;
+}
+
+page-preview .table {
   display: table;
   margin: 0 auto;
   width: 100%;
-  height: 33%;
+  height: 40%;
   text-align: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -25527,36 +25539,12 @@ page-preview .cell {
   vertical-align: middle;
 }
 
-page-preview .preview-btn {
+page-preview .open {
   width: 20%;
   height: auto;
 }
 
-page-preview .content-title {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: large;
-}
-
-page-preview .content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: small;
-}
-
 page-video video {
   width: 100%;
-  height: auto;
-}
-
-page-video .content-title {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: large;
-}
-
-page-video .content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: small;
+  height: 40%;
 }
