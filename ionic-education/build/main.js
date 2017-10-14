@@ -219,7 +219,7 @@ var VideoServiceProvider = (function () {
     VideoServiceProvider.prototype.getVideo = function (id) {
         var url = "/assets/mock/video.json"; // 本机模拟请求
         if (__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].production) {
-            url = "/ionic-education/video"; // 跨域访问 ionic.config.json proxyUrl
+            url = "https://easy-mock.com/mock/59cf1534c5c4302238f614c5/ionic-education/video"; // 跨域访问 ionic.config.json proxyUrl
         }
         console.log('VideoServiceProvider = ' + url);
         // 加载进度条
@@ -308,7 +308,7 @@ var PreviewPage = (function () {
     PreviewPage.prototype.ngOnInit = function () {
         var _this = this;
         console.log('ngOnInit VideoPage');
-        var url = (__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].production) ? "/ionic-education/preview" : "/assets/mock/preview.json";
+        var url = (__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].production) ? "https://easy-mock.com/mock/59cf1534c5c4302238f614c5/ionic-education/preview" : "/assets/mock/preview.json";
         this.httpService.get(url).subscribe(function (preview) {
             _this.preview = preview;
             // https://view.officeapps.live.com/op/view.aspx?src=
@@ -331,7 +331,7 @@ var PreviewPage = (function () {
 }());
 PreviewPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-preview',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/'<!--\n  Generated template for the PreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <div class="preview-player">\n    <div class="cell">\n      <a href="{{previewUrl}}">\n        <img class="preview-btn" src="../../assets/image/education_btn_open_data.png"/>\n      </a>\n    </div>\n  </div>\n\n  <p class="content-title">{{preview.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content">{{preview.description}}</p>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar style="background-color: #ffffff;">\n    <ion-title style="text-align:center" (click)="gotoAppDownload()">奥昇云校APP</ion-title>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/,
+        selector: 'page-preview',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/'<!--\n  Generated template for the PreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <div class="preview-player" style="background-image: url(assets/image/education_def_video.png)">\n    <div class="cell">\n      <a href="{{previewUrl}}">\n        <img class="preview-btn" src="assets/image/education_btn_open_data.png"/>\n      </a>\n    </div>\n  </div>\n\n  <p class="content-title">{{preview.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content">{{preview.description}}</p>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar style="background-color: #ffffff;">\n    <ion-title style="text-align:center" (click)="gotoAppDownload()">奥昇云校APP</ion-title>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]])
 ], PreviewPage);
