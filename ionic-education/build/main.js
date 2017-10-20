@@ -40,7 +40,7 @@ webpackEmptyAsyncContext.id = 150;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__video_video__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__preview_preview__ = __webpack_require__(199);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -94,7 +94,7 @@ HomePage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_video__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_service_service__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_api__ = __webpack_require__(197);
@@ -137,26 +137,22 @@ var VideoPage = (function () {
             console.log("subscribe");
             _this.video = video;
             // Todo 测试用代码
-            _this.video.url = _this.videoId;
+            // this.video.url = this.videoId;
             var videoPlayer = document.getElementById("video-player");
             videoPlayer.setAttribute('src', _this.video.url);
         }, function (error) {
             _this.errorMessage = error;
         });
     };
-    VideoPage.prototype.gotoDownloadPage = function () {
-        console.log("gotoDownloadPage");
-    };
     return VideoPage;
 }());
 VideoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-video',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/'<!--\n  Generated template for the VideoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>-->\n<!--<ion-navbar>-->\n<!--<ion-title>{{video.name}}</ion-title>-->\n<!--</ion-navbar>-->\n<!--</ion-header>-->\n\n<ion-content>\n  <video id="video-player" controls autoplay="autoplay">\n    <source src={{video.url}} type="video/mp4">\n    您的浏览器不支持 HTML5 video 标签。\n  </video>\n\n  <p class="content-title">{{video.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content-body">{{video.description}}</p>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title style="text-align:center" (click)="gotoDownloadPage()">奥昇云校APP</ion-title>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/,
+        selector: 'page-video',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/'<!--\n  Generated template for the VideoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>-->\n<!--<ion-navbar>-->\n<!--<ion-title>{{video.name}}</ion-title>-->\n<!--</ion-navbar>-->\n<!--</ion-header>-->\n\n<ion-content>\n  <video id="video-player" controls autoplay="autoplay">\n    <source src={{video.url}} type="video/mp4">\n    您的浏览器不支持 HTML5 video 标签。\n  </video>\n\n  <p class="content-title">{{video.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content-body">{{video.description}}</p>\n</ion-content>\n\n<ion-footer no-border>\n  <education-app></education-app>\n</ion-footer>\n\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]])
 ], VideoPage);
 
-var _a, _b, _c;
 //# sourceMappingURL=video.js.map
 
 /***/ }),
@@ -210,7 +206,7 @@ var Api = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PreviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_preview__ = __webpack_require__(273);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_service_service__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__details_details__ = __webpack_require__(200);
@@ -255,15 +251,12 @@ var PreviewPage = (function () {
         this.httpService.get(__WEBPACK_IMPORTED_MODULE_5__environments_api__["a" /* Api */].getPreviewUrl()).subscribe(function (preview) {
             _this.preview = preview;
             // Todo 测试用代码
-            _this.preview.url = _this.previewId;
+            // this.preview.url = this.previewId;
             _this.previewUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + _this.preview.url;
             console.log("subscribe: previewUrl = " + _this.previewUrl);
         }, function (error) {
             _this.errorMessage = error;
         });
-    };
-    PreviewPage.prototype.gotoDownloadPage = function () {
-        console.log("gotoDownloadPage");
     };
     PreviewPage.prototype.gotoDetailsPage = function () {
         this.entryDetailsPage(this.preview.url);
@@ -275,12 +268,11 @@ var PreviewPage = (function () {
 }());
 PreviewPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-preview',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/'<!--\n  Generated template for the PreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <div class="table" style="background-image: url(assets/image/education_def_video.png)">\n    <div class="cell">\n      <a href="{{previewUrl}}">\n        <img class="open" src="assets/image/education_btn_open_data.png"/>\n      </a>\n    </div>\n  </div>\n\n  <p class="content-title">{{preview.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content-body">{{preview.description}}</p>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title style="text-align:center" (click)="gotoDownloadPage()">奥昇云校APP</ion-title>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/,
+        selector: 'page-preview',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/'<!--\n  Generated template for the PreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <div class="table" style="background-image: url(assets/image/education_def_video.png)">\n    <div class="cell">\n      <a href="{{previewUrl}}">\n        <img class="open" src="assets/image/education_btn_open_data.png"/>\n      </a>\n    </div>\n  </div>\n\n  <p class="content-title">{{preview.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content-body">{{preview.description}}</p>\n\n</ion-content>\n\n<ion-footer no-border>\n  <education-app></education-app>\n</ion-footer>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]])
 ], PreviewPage);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=preview.js.map
 
 /***/ }),
@@ -291,7 +283,7 @@ var _a, _b, _c, _d;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -357,9 +349,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(194);
@@ -369,12 +361,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_preview_preview__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_details_details__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_service_service__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_education_app_education_app__ = __webpack_require__(274);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -399,13 +393,17 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_video_video__["a" /* VideoPage */],
             __WEBPACK_IMPORTED_MODULE_9__pages_preview_preview__["a" /* PreviewPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_details_details__["a" /* DetailsPage */]
+            __WEBPACK_IMPORTED_MODULE_10__pages_details_details__["a" /* DetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_12__components_education_app_education_app__["a" /* EducationAppComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
-                links: []
+                links: [
+                    { component: __WEBPACK_IMPORTED_MODULE_8__pages_video_video__["a" /* VideoPage */], name: 'Video', segment: 'video/:params' },
+                    { component: __WEBPACK_IMPORTED_MODULE_9__pages_preview_preview__["a" /* PreviewPage */], name: 'Preview', segment: 'preview/:params' }
+                ]
             })
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
@@ -435,7 +433,7 @@ AppModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(195);
@@ -511,6 +509,60 @@ var Preview = (function () {
 
 /***/ }),
 
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EducationAppComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the EducationAppComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var EducationAppComponent = (function () {
+    // text: string;
+    function EducationAppComponent(toastCtrl) {
+        this.toastCtrl = toastCtrl;
+        console.log('Hello EducationAppComponent Component');
+    }
+    EducationAppComponent.prototype.gotoEducationApp = function () {
+        console.log("gotoDownloadPage");
+        this.presentToast();
+    };
+    EducationAppComponent.prototype.presentToast = function () {
+        var toast = this.toastCtrl.create({
+            message: '以后会跳转教育APP下载页面，或者直接下载教育APP',
+            duration: 3000
+        });
+        toast.present();
+    };
+    return EducationAppComponent;
+}());
+EducationAppComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'education-app',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\components\education-app\education-app.html"*/'<!-- Generated template for the EducationAppComponent component -->\n<div>\n  <button ion-button full (click)="gotoEducationApp()">奥昇云校APP</button>\n</div>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\components\education-app\education-app.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
+], EducationAppComponent);
+
+//# sourceMappingURL=education-app.js.map
+
+/***/ }),
+
 /***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -524,7 +576,7 @@ var Preview = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(271);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -554,20 +606,15 @@ var ServiceProvider = (function () {
     }
     ServiceProvider.prototype.get = function (url) {
         console.log('VideoServiceProvider = ' + url);
-        // 加载进度条
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...',
-            dismissOnPageChange: true
-        });
-        loading.present();
+        // this.showLoading();
         return this.http.get(url)
             .map(function (response) {
-            loading.dismiss();
+            // this.dismissLoading();
             var body = response.json();
             console.log('response = ' + JSON.stringify(body));
             return body.data || {};
         }).catch(function (error) {
-            loading.dismiss();
+            // this.dismissLoading();
             var errMsg;
             if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Response */]) {
                 var body = error.json() || '';
@@ -585,10 +632,9 @@ var ServiceProvider = (function () {
 }());
 ServiceProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* LoadingController */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* LoadingController */]])
 ], ServiceProvider);
 
-var _a, _b;
 //# sourceMappingURL=service.js.map
 
 /***/ })
