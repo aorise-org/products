@@ -1,6 +1,101 @@
-webpackJsonp([0],{
+webpackJsonp([1],{
 
-/***/ 108:
+/***/ 113:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Detail; });
+/**
+ * Created by tangjy on 2017/9/29.
+ */
+var Detail = (function () {
+    function Detail() {
+    }
+    return Detail;
+}());
+
+//# sourceMappingURL=detail.js.map
+
+/***/ }),
+
+/***/ 114:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__(216);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/*
+ Generated class for the ServiceProvider provider.
+
+ See https://angular.io/guide/dependency-injection for more info on providers
+ and Angular DI.
+ */
+var ServiceProvider = (function () {
+    function ServiceProvider(http, loadingCtrl) {
+        this.http = http;
+        this.loadingCtrl = loadingCtrl;
+        console.log('Hello VideoServiceProvider Provider');
+    }
+    ServiceProvider.prototype.get = function (url) {
+        console.log('VideoServiceProvider = ' + url);
+        // this.showLoading();
+        return this.http.get(url)
+            .map(function (response) {
+            // this.dismissLoading();
+            console.log('response = ' + JSON.stringify(response));
+            return response || {};
+        }).catch(function (error) {
+            // this.dismissLoading();
+            var errMsg;
+            if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Response */]) {
+                var body = error.json() || '';
+                var err = body.error || JSON.stringify(body);
+                errMsg = error.status + " - " + (error.statusText || '') + " " + err;
+            }
+            else {
+                errMsg = error.message ? error.message : error.toString();
+            }
+            console.error(errMsg);
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
+        });
+    };
+    return ServiceProvider;
+}());
+ServiceProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* LoadingController */]])
+], ServiceProvider);
+
+//# sourceMappingURL=service.js.map
+
+/***/ }),
+
+/***/ 129:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +108,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 108;
+webpackEmptyAsyncContext.id = 129;
 
 /***/ }),
 
-/***/ 150:
+/***/ 170:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,19 +125,19 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 150;
+webpackEmptyAsyncContext.id = 170;
 
 /***/ }),
 
-/***/ 195:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__video_video__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__preview_preview__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__video_video__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__preview_preview__ = __webpack_require__(220);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -78,8 +173,8 @@ var HomePage = (function () {
     return HomePage;
 }());
 HomePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\home\home.html"*/'<!--<ion-header>-->\n<!--<ion-navbar>-->\n<!--<ion-title style="text-align:center">-->\n<!--智慧教育-->\n<!--</ion-title>-->\n<!--</ion-navbar>-->\n<!--</ion-header>-->\n\n<ion-content padding>\n  <p> 教育项目分享链接：</p>\n\n  <button ion-button block (click)="gotoVideoPage()">在线视频</button>\n\n  <button ion-button block (click)="gotoPreviewPage()">在线预览</button>\n\n</ion-content>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\home\home.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-home',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\home\home.html"*/'<!--<ion-header>-->\n<!--<ion-navbar>-->\n<!--<ion-title style="text-align:center">-->\n<!--智慧教育-->\n<!--</ion-title>-->\n<!--</ion-navbar>-->\n<!--</ion-header>-->\n\n<ion-content padding>\n  <p> {{ \'HOME.SHARE_TITLE\' | translate }}</p>\n\n  <button ion-button block (click)="gotoVideoPage()">{{ \'HOME.SHARE_VIDEO\' | translate }}</button>\n\n  <button ion-button block (click)="gotoPreviewPage()">{{ \'HOME.SHARE_PREVIEW\' | translate }}</button>\n\n</ion-content>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], HomePage);
@@ -88,16 +183,16 @@ HomePage = __decorate([
 
 /***/ }),
 
-/***/ 196:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_video__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_service_service__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_api__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_video__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_service_service__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_api__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -119,6 +214,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var VideoPage = (function () {
+    // videoWrap: VideoWrap;
     function VideoPage(navCtrl, navParams, httpService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -133,22 +229,23 @@ var VideoPage = (function () {
     VideoPage.prototype.ngOnInit = function () {
         var _this = this;
         console.log('ngOnInit VideoPage');
-        this.httpService.get(__WEBPACK_IMPORTED_MODULE_4__environments_api__["a" /* Api */].getVideoUrl()).subscribe(function (video) {
+        this.httpService.get(__WEBPACK_IMPORTED_MODULE_4__environments_api__["a" /* Api */].getVideoUrl()).subscribe(function (videoWrap) {
             console.log("subscribe");
-            _this.video = video;
+            _this.video = videoWrap.data;
             // Todo 测试用代码
             // this.video.url = this.videoId;
             var videoPlayer = document.getElementById("video-player");
             videoPlayer.setAttribute('src', _this.video.url);
         }, function (error) {
             _this.errorMessage = error;
+            console.log("error = " + _this.errorMessage);
         });
     };
     return VideoPage;
 }());
 VideoPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-video',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/'<!--\n  Generated template for the VideoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>-->\n<!--<ion-navbar>-->\n<!--<ion-title>{{video.name}}</ion-title>-->\n<!--</ion-navbar>-->\n<!--</ion-header>-->\n\n<ion-content>\n  <video id="video-player" controls autoplay="autoplay">\n    <source src={{video.url}} type="video/mp4">\n    您的浏览器不支持 HTML5 video 标签。\n  </video>\n\n  <p class="content-title">{{video.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content-body">{{video.description}}</p>\n</ion-content>\n\n<ion-footer no-border>\n  <education-app></education-app>\n</ion-footer>\n\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-video',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/'<!--\n  Generated template for the VideoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>-->\n<!--<ion-navbar>-->\n<!--<ion-title>{{video.name}}</ion-title>-->\n<!--</ion-navbar>-->\n<!--</ion-header>-->\n\n<ion-content>\n  <video id="video-player" controls autoplay="autoplay">\n    <source src={{video.url}} type="video/mp4">\n    {{\'NOT_SUPPORT_VIDEO_TAG\' | translate}}\n  </video>\n\n  <education-detail [detailPreview]="video"></education-detail>\n</ion-content>\n\n<ion-footer no-border>\n  <education-app></education-app>\n</ion-footer>\n\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\video\video.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]])
 ], VideoPage);
@@ -157,12 +254,12 @@ VideoPage = __decorate([
 
 /***/ }),
 
-/***/ 197:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Api; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(219);
 
 /**
  * Created by tangjy on 2017/10/14.
@@ -183,7 +280,7 @@ var Api = (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -200,17 +297,17 @@ var Api = (function () {
 
 /***/ }),
 
-/***/ 199:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PreviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_preview__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_service_service__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__details_details__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__environments_api__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_preview__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_service_service__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__details_details__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__environments_api__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -248,12 +345,12 @@ var PreviewPage = (function () {
     PreviewPage.prototype.ngOnInit = function () {
         var _this = this;
         console.log('ngOnInit VideoPage');
-        this.httpService.get(__WEBPACK_IMPORTED_MODULE_5__environments_api__["a" /* Api */].getPreviewUrl()).subscribe(function (preview) {
-            _this.preview = preview;
+        this.httpService.get(__WEBPACK_IMPORTED_MODULE_5__environments_api__["a" /* Api */].getPreviewUrl()).subscribe(function (previewWrap) {
+            _this.preview = previewWrap.data;
             // Todo 测试用代码
             // this.preview.url = this.previewId;
-            _this.previewUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + _this.preview.url;
-            console.log("subscribe: previewUrl = " + _this.previewUrl);
+            // this.previewUrl = "https://view.officeapps.live.com/op/view.aspx?src=" + this.preview.url;
+            // console.log("subscribe: previewUrl = " + this.previewUrl);
         }, function (error) {
             _this.errorMessage = error;
         });
@@ -267,23 +364,24 @@ var PreviewPage = (function () {
     return PreviewPage;
 }());
 PreviewPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-preview',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/'<!--\n  Generated template for the PreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <div class="table" style="background-image: url(assets/image/education_def_video.png)">\n    <div class="cell">\n      <a href="{{previewUrl}}">\n        <img class="open" src="assets/image/education_btn_open_data.png"/>\n      </a>\n    </div>\n  </div>\n\n  <p class="content-title">{{preview.name}}</p>\n  <hr>\n  <p class="content-title">课程介绍</p>\n  <p class="content-body">{{preview.description}}</p>\n\n</ion-content>\n\n<ion-footer no-border>\n  <education-app></education-app>\n</ion-footer>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-preview',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/'<!--\n  Generated template for the PreviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n  <div class="table" style="background-image: url(assets/image/education_def_video.png)">\n    <div class="cell">\n      <img class="open" src="assets/image/education_btn_open_data.png" (click)="gotoDetailsPage()"/>\n    </div>\n  </div>\n\n  <education-detail [detailPreview]="preview"></education-detail>\n</ion-content>\n\n<ion-footer no-border>\n  <education-app></education-app>\n</ion-footer>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\preview\preview.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]) === "function" && _d || Object])
 ], PreviewPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=preview.js.map
 
 /***/ }),
 
-/***/ 200:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -313,8 +411,8 @@ var DetailsPage = (function () {
     return DetailsPage;
 }());
 DetailsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-details',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\details\details.html"*/'<!--\n  Generated template for the DetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>-->\n\n<!--<ion-navbar>-->\n<!--<ion-title>details</ion-title>-->\n<!--</ion-navbar>-->\n\n<!--</ion-header>-->\n\n\n<ion-content padding>\n  {{detailsUrl}}\n</ion-content>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\details\details.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-details',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\pages\details\details.html"*/'<!--\n  Generated template for the DetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>-->\n\n<!--<ion-navbar>-->\n<!--<ion-title>details</ion-title>-->\n<!--</ion-navbar>-->\n\n<!--</ion-header>-->\n\n\n<ion-content>\n  <pdf-viewer [src]="detailsUrl"\n              [render-text]="true"\n              style="display: block;">\n  </pdf-viewer>\n</ion-content>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\pages\details\details.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], DetailsPage);
@@ -323,45 +421,51 @@ DetailsPage = __decorate([
 
 /***/ }),
 
-/***/ 201:
+/***/ 239:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(240);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(254);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(219);
 
 
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
 
 /***/ }),
 
-/***/ 220:
+/***/ 254:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export createTranslateLoader */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(268);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_video_video__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_preview_preview__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_details_details__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_service_service__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_education_app_education_app__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_video_video__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_preview_preview__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_details_details__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_service_service__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ngx_translate_core__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ngx_translate_http_loader__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ng2_pdf_viewer__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ng2_pdf_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_ng2_pdf_viewer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_education_app_education_app__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_education_detail_education_detail__ = __webpack_require__(361);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -381,44 +485,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+// // The translate loader needs to know where to load i18n files
+// // in Ionic's static asset pipeline.
+function createTranslateLoader(http) {
+    return new __WEBPACK_IMPORTED_MODULE_12__ngx_translate_http_loader__["a" /* TranslateHttpLoader */](http, './assets/i18n/', '.json');
+}
 var AppModule = (function () {
     function AppModule() {
     }
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_video_video__["a" /* VideoPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_preview_preview__["a" /* PreviewPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_details_details__["a" /* DetailsPage */],
-            __WEBPACK_IMPORTED_MODULE_12__components_education_app_education_app__["a" /* EducationAppComponent */]
+            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_video_video__["a" /* VideoPage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_preview_preview__["a" /* PreviewPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_details_details__["a" /* DetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_15__components_education_app_education_app__["a" /* EducationAppComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_education_detail_education_detail__["a" /* EducationDetailComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
+            __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_14_ng2_pdf_viewer__["PdfViewerModule"],
+            __WEBPACK_IMPORTED_MODULE_11__ngx_translate_core__["b" /* TranslateModule */].forRoot({
+                loader: {
+                    provide: __WEBPACK_IMPORTED_MODULE_11__ngx_translate_core__["a" /* TranslateLoader */],
+                    useFactory: (createTranslateLoader),
+                    deps: [__WEBPACK_IMPORTED_MODULE_13__angular_common_http__["a" /* HttpClient */]]
+                }
+            }),
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { component: __WEBPACK_IMPORTED_MODULE_8__pages_video_video__["a" /* VideoPage */], name: 'Video', segment: 'video/:params' },
-                    { component: __WEBPACK_IMPORTED_MODULE_9__pages_preview_preview__["a" /* PreviewPage */], name: 'Preview', segment: 'preview/:params' }
+                    { component: __WEBPACK_IMPORTED_MODULE_7__pages_video_video__["a" /* VideoPage */], name: 'Video', segment: 'video/:params' },
+                    { component: __WEBPACK_IMPORTED_MODULE_8__pages_preview_preview__["a" /* PreviewPage */], name: 'Preview', segment: 'preview/:params' }
                 ]
             })
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_video_video__["a" /* VideoPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_preview_preview__["a" /* PreviewPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_details_details__["a" /* DetailsPage */]
+            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_video_video__["a" /* VideoPage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_preview_preview__["a" /* PreviewPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_details_details__["a" /* DetailsPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_11__providers_service_service__["a" /* ServiceProvider */]
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+            __WEBPACK_IMPORTED_MODULE_10__providers_service_service__["a" /* ServiceProvider */]
         ]
     })
 ], AppModule);
@@ -427,16 +549,17 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 268:
+/***/ 302:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__ = __webpack_require__(222);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -451,71 +574,155 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
+    function MyApp(translate, platform, statusBar, splashScreen) {
+        var _this = this;
+        this.translate = translate;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
             splashScreen.hide();
+            _this.initTranslate();
         });
     }
+    MyApp.prototype.initTranslate = function () {
+        // Set the default language for translation strings, and the current language.
+        this.translate.setDefaultLang('zh');
+        if (this.translate.getBrowserLang() !== undefined) {
+            this.translate.use(this.translate.getBrowserLang());
+        }
+        else {
+            this.translate.use('zh'); // Set your language here
+        }
+    };
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
-/***/ 269:
+/***/ 303:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export VideoWrap */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Video; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__detail__ = __webpack_require__(113);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
 /**
  * Created by tangjy on 2017/9/29.
  */
-var Video = (function () {
+var VideoWrap = (function () {
+    function VideoWrap() {
+    }
+    return VideoWrap;
+}());
+
+var Video = (function (_super) {
+    __extends(Video, _super);
     function Video() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return Video;
-}());
+}(__WEBPACK_IMPORTED_MODULE_0__detail__["a" /* Detail */]));
 
 //# sourceMappingURL=video.js.map
 
 /***/ }),
 
-/***/ 273:
+/***/ 310:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export PreviewWrap */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Preview; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__detail__ = __webpack_require__(113);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
 /**
  * Created by tangjy on 2017/9/29.
  */
-var Preview = (function () {
+var PreviewWrap = (function () {
+    function PreviewWrap() {
+    }
+    return PreviewWrap;
+}());
+
+var Preview = (function (_super) {
+    __extends(Preview, _super);
     function Preview() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return Preview;
-}());
+}(__WEBPACK_IMPORTED_MODULE_0__detail__["a" /* Detail */]));
 
 //# sourceMappingURL=preview.js.map
 
 /***/ }),
 
-/***/ 274:
+/***/ 332:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 348:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 349:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 350:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 360:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EducationAppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -553,8 +760,8 @@ var EducationAppComponent = (function () {
     return EducationAppComponent;
 }());
 EducationAppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'education-app',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\components\education-app\education-app.html"*/'<!-- Generated template for the EducationAppComponent component -->\n<div>\n  <button ion-button full (click)="gotoEducationApp()">奥昇云校APP</button>\n</div>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\components\education-app\education-app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'education-app',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\components\education-app\education-app.html"*/'<!-- Generated template for the EducationAppComponent component -->\n<div>\n  <button ion-button full (click)="gotoEducationApp()">{{ \'EDUCATION_APP.NAME\' | translate }}</button>\n</div>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\components\education-app\education-app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]])
 ], EducationAppComponent);
@@ -563,20 +770,13 @@ EducationAppComponent = __decorate([
 
 /***/ }),
 
-/***/ 99:
+/***/ 361:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServiceProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EducationDetailComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_detail__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -588,56 +788,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
-/*
- Generated class for the ServiceProvider provider.
-
- See https://angular.io/guide/dependency-injection for more info on providers
- and Angular DI.
+/**
+ * Generated class for the EducationDetailComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
  */
-var ServiceProvider = (function () {
-    function ServiceProvider(http, loadingCtrl) {
-        this.http = http;
-        this.loadingCtrl = loadingCtrl;
-        console.log('Hello VideoServiceProvider Provider');
+var EducationDetailComponent = (function () {
+    function EducationDetailComponent() {
+        console.log('Hello EducationDetailComponent Component');
     }
-    ServiceProvider.prototype.get = function (url) {
-        console.log('VideoServiceProvider = ' + url);
-        // this.showLoading();
-        return this.http.get(url)
-            .map(function (response) {
-            // this.dismissLoading();
-            var body = response.json();
-            console.log('response = ' + JSON.stringify(body));
-            return body.data || {};
-        }).catch(function (error) {
-            // this.dismissLoading();
-            var errMsg;
-            if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Response */]) {
-                var body = error.json() || '';
-                var err = body.error || JSON.stringify(body);
-                errMsg = error.status + " - " + (error.statusText || '') + " " + err;
-            }
-            else {
-                errMsg = error.message ? error.message : error.toString();
-            }
-            console.error(errMsg);
-            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
-        });
-    };
-    return ServiceProvider;
+    return EducationDetailComponent;
 }());
-ServiceProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["e" /* LoadingController */]])
-], ServiceProvider);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_detail__["a" /* Detail */])
+], EducationDetailComponent.prototype, "detailPreview", void 0);
+EducationDetailComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'education-detail',template:/*ion-inline-start:"D:\AoriseGit\ionic-education\src\components\education-detail\education-detail.html"*/'<!-- Generated template for the EducationDetailComponent component -->\n<div>\n  <p class="content-title">{{detailPreview.name}}</p>\n  <hr>\n  <p class="content-title">{{ \'CONTENT_TITLE\' | translate }}</p>\n  <p class="content-body">{{detailPreview.description}}</p>\n</div>\n'/*ion-inline-end:"D:\AoriseGit\ionic-education\src\components\education-detail\education-detail.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], EducationDetailComponent);
 
-//# sourceMappingURL=service.js.map
+//# sourceMappingURL=education-detail.js.map
 
 /***/ })
 
-},[201]);
+},[239]);
 //# sourceMappingURL=main.js.map
