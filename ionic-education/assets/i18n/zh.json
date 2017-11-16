@@ -8,6 +8,10 @@
     "NAME": "奥昇云校APP",
     "DOWNLOAD": "以后会跳转教育APP下载页面，或者直接下载教育APP"
   },
+  "PREV": "上一页",
+  "NEXT": "下一页",
   "CONTENT_TITLE": "课程介绍",
+  "LEARNED": "人学过",
+  "LECTURER": "主讲",
   "NOT_SUPPORT_VIDEO_TAG": "您的浏览器不支持 HTML5 video 标签。"
 }

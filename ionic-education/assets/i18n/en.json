@@ -8,6 +8,10 @@
     "NAME": "Aorise APP",
     "DOWNLOAD": "Jump to download page."
   },
+  "PREV": "Prev",
+  "NEXT": "Next",
   "CONTENT_TITLE": "Introduction",
+  "LEARNED": "Learned",
+  "LECTURER": "Lecturer",
   "NOT_SUPPORT_VIDEO_TAG": "Your browser does not support HTML5 video tags."
 }
